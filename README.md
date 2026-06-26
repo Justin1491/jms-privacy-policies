@@ -4,16 +4,18 @@ This folder is a static GitHub Pages-ready site for JMS app privacy policies.
 
 ## Current Policy URLs
 
-When published at the root of a GitHub Pages site, the ChatPaste privacy policy URL will be:
+When published at the root of a GitHub Pages site, the app privacy policy URLs will be:
 
 ```text
 https://<github-username>.github.io/<repo-name>/apps/chatpaste/
+https://<github-username>.github.io/<repo-name>/apps/marketmosaic/
 ```
 
 If you publish from a user or organization site repository named `<github-username>.github.io`, the URL will be:
 
 ```text
 https://<github-username>.github.io/apps/chatpaste/
+https://<github-username>.github.io/apps/marketmosaic/
 ```
 
 ## Publish on GitHub Pages
@@ -24,7 +26,7 @@ https://<github-username>.github.io/apps/chatpaste/
 4. In GitHub, open the repository settings.
 5. Go to Pages.
 6. Set the source to deploy from the main branch and root folder.
-7. Use the published `apps/chatpaste/` URL as the App Store privacy policy URL.
+7. Use the published app-specific URL as the App Store privacy policy URL.
 
 ## Add Another App
 
