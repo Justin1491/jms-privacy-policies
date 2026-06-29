@@ -16,6 +16,7 @@ https://justin1491.github.io/jms-privacy-policies/apps/marketmosaic/
 
 - Generic JMS Support URL: `https://justin1491.github.io/jms-privacy-policies/support/`
 - ChatPaste Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/`
+- Support email: `jmsappdevoplement@gmail.com`
 
 ## Add Another App
 
