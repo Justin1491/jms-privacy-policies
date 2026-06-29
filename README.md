@@ -1,42 +1,30 @@
-# JMS Privacy Policies
+# JMS App Support and Privacy Pages
 
-This folder is a static GitHub Pages-ready site for JMS app privacy policies.
+This folder is a static GitHub Pages-ready site for JMS app support information and privacy policies.
 
-## Current Policy URLs
+## Current URLs
 
-When published at the root of a GitHub Pages site, the app privacy policy URLs will be:
-
-```text
-https://<github-username>.github.io/<repo-name>/apps/chatpaste/
-https://<github-username>.github.io/<repo-name>/apps/marketmosaic/
-```
-
-If you publish from a user or organization site repository named `<github-username>.github.io`, the URL will be:
+When published at `https://justin1491.github.io/jms-privacy-policies/`, the current public pages are:
 
 ```text
-https://<github-username>.github.io/apps/chatpaste/
-https://<github-username>.github.io/apps/marketmosaic/
+https://justin1491.github.io/jms-privacy-policies/support/
+https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/
+https://justin1491.github.io/jms-privacy-policies/apps/marketmosaic/
 ```
 
-## Publish on GitHub Pages
+## App Store Metadata
 
-1. Create a new public GitHub repository, for example `jms-privacy-policies`.
-2. Copy the contents of this `PrivacyPolicies` folder into the root of that repository.
-3. Commit and push the files.
-4. In GitHub, open the repository settings.
-5. Go to Pages.
-6. Set the source to deploy from the main branch and root folder.
-7. Use the published app-specific URL as the App Store privacy policy URL.
+- Generic JMS Support URL: `https://justin1491.github.io/jms-privacy-policies/support/`
+- ChatPaste Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/`
 
 ## Add Another App
 
-1. Create a new folder under `apps/<app-slug>/`.
-2. Copy `apps/chatpaste/index.html`.
-3. Update the app name, effective date, description, and policy details.
-4. Add the new app to the policy list in `index.html`.
+1. Add the app-specific privacy policy at `apps/<app-slug>/index.html`.
+2. Add app-specific support notes to `support/index.html` if the app needs them.
+3. Update `index.html` so the new app pages are discoverable.
 
 ## Before Publishing
 
 - Confirm the company name and copyright line are correct.
-- Confirm the privacy text matches the shipped app behavior.
-- Replace the contact section with a direct support email or support URL if one is available.
+- Confirm the support and privacy text match the shipped app behavior.
+- Do not include private user data, logs, API keys, secrets, or unreleased support addresses.
