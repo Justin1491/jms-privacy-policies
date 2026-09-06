@@ -10,12 +10,14 @@ When published at `https://justin1491.github.io/jms-privacy-policies/`, the curr
 https://justin1491.github.io/jms-privacy-policies/support/
 https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/
 https://justin1491.github.io/jms-privacy-policies/apps/marketmosaic/
+https://justin1491.github.io/jms-privacy-policies/apps/chatgpt-theme-selector/
 ```
 
 ## App Store Metadata
 
 - Generic JMS Support URL: `https://justin1491.github.io/jms-privacy-policies/support/`
 - ChatPaste Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/`
+- ChatGPT Theme Selector Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatgpt-theme-selector/`
 - Support email: `jmsappdevoplement@gmail.com`
 
 ## Add Another App
@@ -23,7 +25,7 @@ https://justin1491.github.io/jms-privacy-policies/apps/marketmosaic/
 1. Add the app-specific privacy policy at `apps/<app-slug>/index.html`.
 2. Add app-specific support notes to `support/index.html` if the app needs them.
 3. Update the shared navigation links in `index.html`, `support/index.html`, and each app privacy page.
-4. Update each page's `Related Pages` section so users can move between Support, ChatPaste, Market Mosaic, and the app directory.
+4. Update each page's `Related Pages` section so users can move between Support, each app, and the app directory.
 5. Update `index.html` so the new app pages are discoverable from the home page.
 
 ## Before Publishing
