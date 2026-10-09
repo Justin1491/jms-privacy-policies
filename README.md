@@ -17,6 +17,7 @@ https://justin1491.github.io/jms-privacy-policies/apps/chatgpt-theme-selector/
 
 - Generic JMS Support URL: `https://justin1491.github.io/jms-privacy-policies/support/`
 - ChatPaste Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatpaste/`
+- Market Mosaic Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/marketmosaic/`
 - ChatGPT Theme Selector Privacy Policy URL: `https://justin1491.github.io/jms-privacy-policies/apps/chatgpt-theme-selector/`
 - Support email: `jmsappdevoplement@gmail.com`
 
@@ -34,3 +35,7 @@ https://justin1491.github.io/jms-privacy-policies/apps/chatgpt-theme-selector/
 - Confirm the support and privacy text match the shipped app behavior.
 - Do not include private user data, logs, API keys, secrets, or unreleased support addresses.
 - Run a relative-link check across the static HTML pages before pushing.
+
+## Market Mosaic Disclosure Sync
+
+The October 9, 2026 policy distinguishes local portfolio storage from provider-bound securities, searches, provider account keys, and connection metadata. It also covers provider request analysis, optional local diagnostics, user-selected CSV/diagnostic sharing, retention, and deletion. Keep its substantive sections aligned with `docs/privacy.html` and the disclosure mapping in `docs/PRIVACY_DISCLOSURES.md` in the MarketMosaic app repository. Updating these pages does not update App Store Connect answers.

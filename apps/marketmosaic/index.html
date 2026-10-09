@@ -32,118 +32,122 @@
       </p>
       <div class="policy-meta">
         <span>Publisher: JMS</span>
-        <span>Effective date: June 20, 2026</span>
+        <span>Effective date: October 9, 2026</span>
       </div>
     </section>
 
     <article class="document">
       <div class="callout">
-        Market Mosaic stores portfolio data locally on your device. The app does
-        not use third-party advertising SDKs, analytics SDKs, or tracking SDKs.
-        This policy is linked from the app's Settings screen and should also be
-        used as the App Store privacy policy URL.
+        Portfolio records stay on your device. Live market-data requests go to providers;
+        optional diagnostics stay local unless you choose to share them.
       </div>
-
-      <h2>Privacy Policy Access</h2>
-      <p>
-        Market Mosaic provides access to this privacy policy from within the app
-        in Settings. This URL is also intended for the privacy policy field in
-        App Store Connect.
-      </p>
 
       <h2>Data Stored On Your Device</h2>
       <p>Market Mosaic stores app data locally on your device, including:</p>
       <ul>
-        <li>portfolio names, holdings, tickers, share counts, and cost basis values;</li>
-        <li>portfolio preferences, display settings, refresh state, and onboarding state;</li>
-        <li>optional benchmark-tracking configuration that you choose to create;</li>
-        <li>cached market quotes and derived performance values used to display the app efficiently;</li>
-        <li>an optional Finnhub API key that you enter, stored using the iOS Keychain; and</li>
-        <li>a small App Group widget snapshot so the widget can display portfolio summary information.</li>
+        <li>portfolio names, holdings, tickers, share counts, cash amounts, and cost basis;</li>
+        <li>preferences, display settings, refresh state, and onboarding state;</li>
+        <li>Benchmark and Smart Tracking configuration, official-value anchors, and reconciliation records;</li>
+        <li>cached market quotes, history, and derived performance values;</li>
+        <li>an optional Finnhub API key stored in the iOS Keychain;</li>
+        <li>a compact App Group snapshot for the read-only widget; and</li>
+        <li>optional local sync and performance diagnostics described below.</li>
       </ul>
       <p>
-        The widget snapshot is read-only and is intended for compact display. It
-        is not used by Market Mosaic to track you across apps or websites.
+        JMS does not operate a Market Mosaic account service or server-side portfolio
+        database. The widget reads the app's local snapshot and does not contact
+        market-data providers or read your API key.
       </p>
 
-      <h2>Market Data Requests</h2>
+      <h2>Market Data Requests And Provider Accounts</h2>
       <p>
-        Market Mosaic may contact third-party market data providers to retrieve
-        quotes, symbol search results, company information, market status, index
-        data, and historical baseline values. Depending on the feature you use,
-        these requests may include ticker symbols, search terms, and your Finnhub
-        API key if you have configured one.
+        In live mode, Market Mosaic contacts Finnhub and Yahoo Finance for quotes,
+        symbol search, company information, market calendars, indexes, futures,
+        extended-hours values, and historical prices. Requests can include ticker
+        symbols or search terms. Your Finnhub API key is sent to Finnhub to authenticate
+        requests; Market Mosaic does not send it to Yahoo Finance.
       </p>
       <p>
-        Market Mosaic currently uses Finnhub as its primary live-data provider
-        and Yahoo Finance as a best-effort fallback for certain market data.
-        Those providers process requests according to their own terms and privacy
-        practices.
+        Portfolio names, share counts, cash amounts, cost basis, official-value anchors,
+        and total portfolio values are not sent in market-data requests. Requested
+        securities and search terms can nevertheless reveal financial interests or
+        portfolio composition. Providers also receive ordinary connection information,
+        such as your IP address and HTTP request metadata.
       </p>
       <p>
-        Market data requests are used only to provide app functionality, such as
-        displaying quotes, market status, index values, symbol search results,
-        company information, and derived portfolio performance. Market Mosaic
-        does not use those requests for advertising, tracking, analytics, or
-        building user profiles.
-      </p>
-
-      <h2>Third-Party Sharing And Protection</h2>
-      <p>
-        Market Mosaic does not sell user data. Market Mosaic shares user data
-        with third parties only when needed for app functionality, such as sending
-        ticker symbols, search terms, and a configured Finnhub API key to market
-        data providers. Market Mosaic does not authorize third-party providers to
-        use data received from the app for tracking, advertising, resale, or
-        unrelated profiling.
+        Local storage does not mean that provider requests are anonymous or never retained.
+        A Finnhub key identifies a provider account. Finnhub's terms state that queries
+        may be logged and used to provide results, improve its service, and study usage.
+        Providers handle requests and retain information under their own terms and
+        privacy practices. Review
+        <a href="https://finnhub.io/terms-of-service">Finnhub's terms and privacy information</a>
+        and <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html">Yahoo's privacy policy</a>.
       </p>
       <p>
-        Any third party that receives user data from Market Mosaic must provide
-        the same or equal protection for that data as described in this policy
-        and as required by Apple's App Review Guidelines.
+        For App Store privacy disclosures, provider-bound securities, searches, provider
+        account identifiers, and connection metadata are treated conservatively as linked
+        data used for app functionality and provider service analytics. The analytics
+        disclosure accounts for providers studying request usage; Market Mosaic does
+        not upload its own analytics stream. This does not mean that JMS receives your
+        locally stored portfolio database.
       </p>
 
-      <h2>No Tracking, Ads, Or Analytics</h2>
+      <h2>No Advertising Or Cross-App Tracking</h2>
       <p>
-        Market Mosaic does not use third-party advertising SDKs, third-party
-        analytics SDKs, or tracking SDKs. Market Mosaic does not sell user data
-        and does not track users across apps or websites.
+        Market Mosaic does not sell user data, display ads, use third-party advertising,
+        analytics, or tracking SDKs, or link data across apps and websites for advertising.
+        Market-data requests support the app's features. Provider processing is described
+        above; local diagnostics are described below.
       </p>
 
-      <h2>No Account Required</h2>
+      <h2>Optional Diagnostics And Exports</h2>
       <p>
-        Market Mosaic does not require an account. The developer does not operate
-        a Market Mosaic user account service or server-side portfolio database.
+        Sync diagnostic recording is off by default. Settings &rarr; Market Data Diagnostics
+        lets you record for 48 hours, extend or stop recording, clear history, and choose
+        to export it. Sync logs are bounded to 48 hours and 1 MB. Failures and recoveries
+        may include ticker symbols that reveal portfolio composition, along with timing,
+        counts, and typed outcomes. They exclude shares, prices, values, portfolio names,
+        API keys, raw provider responses, and device or network identity.
+      </p>
+      <p>
+        On iOS 27, the same opt-in window also enables local Apple MetricKit/StateReporting
+        summaries. Only selected timing, CPU, crash/hang/failure categories, and refresh
+        context are retained, bounded to 100 summaries and 48 hours. Raw system reports,
+        call stacks, device identifiers, and portfolio values are not saved in these summaries.
+      </p>
+      <p>
+        Market Mosaic does not automatically upload diagnostics to JMS. Exporting
+        diagnostics or a portfolio CSV opens the system share interface; you choose a
+        destination. A portfolio CSV contains the portfolio names, securities, shares or
+        cash amounts, and cost basis needed for re-import. Files you save or share leave
+        the app's control and follow the recipient or storage service's practices.
+        Support messages and any attachments you choose to send to JMS may contain
+        your contact details, diagnostics, or financial information.
       </p>
 
-      <h2>Data Retention And Deletion</h2>
+      <h2>Privacy Choices, Retention, And Deletion</h2>
       <p>
-        Data stored by Market Mosaic remains on your device until you remove it.
-        You can delete portfolios, holdings, sample data, and saved API keys from
-        within the app where those controls are available. You can also remove
-        app data by deleting the app from your device, subject to normal iOS
-        behavior for local storage and Keychain items.
+        Demo mode works without a Finnhub key. Live market data requires a configured
+        provider key; you can remove your saved key in Settings. Removing a key stops
+        its future use but does not delete past requests held by providers. Their account
+        and deletion controls govern those records. Futures &amp; Extended Hours can be
+        disabled separately; doing so does not disable ordinary live quotes or search.
       </p>
       <p>
-        Because Market Mosaic does not operate a server-side user account system,
-        there is no separate remote Market Mosaic account to delete.
-      </p>
-
-      <h2>Consent And Privacy Choices</h2>
-      <p>
-        Entering a Finnhub API key and using market-data features allows Market
-        Mosaic to send the market-data requests described above. You can withdraw
-        that consent by removing the saved API key in Settings. You can also stop
-        using live market-data features by not entering an API key, and you can
-        remove local app data using the in-app delete/reset controls or by
-        deleting the app from your device.
+        You can delete portfolios and holdings, remove saved keys, and clear diagnostic
+        history in the app. Stopping diagnostic recording does not immediately erase
+        existing history; it remains subject to the retention limits above. Deleting the
+        app removes its local container under normal iOS behavior; Keychain items may
+        survive uninstall, so remove the saved key in Settings when you want to delete it.
+        Exported files, provider records, and files shared with other people are not
+        removed by the app's delete/reset controls.
       </p>
       <p>
-        Market Mosaic does not store user data on a JMS server, so there is no
-        remote portfolio database for JMS to delete. If you send information to
-        JMS through a support request, you may ask JMS to delete that support
-        communication by emailing
-        <a href="mailto:jmsappdevoplement@gmail.com">jmsappdevoplement@gmail.com</a>.
+        Market Mosaic requires no JMS account. Finnhub may require its own account for
+        a live-data key. For support or deletion of a support communication sent to JMS,
+        email <a href="mailto:jmsappdevoplement@gmail.com">jmsappdevoplement@gmail.com</a>.
+        Do not send API keys or private portfolio files unless they are necessary for
+        your request; redact personal information before sharing diagnostics.
       </p>
 
       <h2>Children's Privacy</h2>
@@ -154,23 +158,17 @@
 
       <h2>Important Financial Disclaimer</h2>
       <p>
-        Market Mosaic is provided for informational purposes only. It is not
-        investment advice. Market data may be delayed, incomplete, or inaccurate.
-        Investing involves risk, including possible loss of principal.
+        Market Mosaic is provided for informational purposes only and is not investment
+        advice. Market data may be delayed, incomplete, or inaccurate. Investing involves
+        risk, including loss of principal. Conduct your own research or consult a
+        qualified financial professional before making investment decisions.
       </p>
 
-      <h2>Changes To This Policy</h2>
+      <h2>Changes To This Policy And Contact</h2>
       <p>
-        This policy may be updated as Market Mosaic changes. The effective date
-        above will be updated when the policy changes.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        For privacy questions, email JMS at
+        This policy may change as Market Mosaic changes; its effective date will be
+        updated. For privacy questions, contact
         <a href="mailto:jmsappdevoplement@gmail.com">jmsappdevoplement@gmail.com</a>.
-        Please do not include private portfolio details or API keys in support
-        requests.
       </p>
 
       <section class="related-pages" aria-labelledby="related-pages-heading">
